@@ -25,6 +25,6 @@ jobs:
         #### AUFGABE 3 COMPILE, DOCKER BUILD UND PUSH
           # hier ist Platz für maven package und docker build
           mvn package
-          docker build --tag pet-clinic:latest -f Dockerfile .
+          docker build --tag rainote/pet-clinic:latest -f Dockerfile .
           docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
           docker push rainote/pet-clinic:latest
